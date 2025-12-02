@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+
+  <body class="body cart-body">
+    <div class="nav-bar">
+      <div class="logo-container">
+        <img class="logo" src="../../Assets/logo.png" alt="" />
+      </div>
+
+      <div class="buttons">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="catalog.html">Shop</a>
+        <a class="nav-button" href="about.html">About Us</a>
+        <a class="nav-button" href="signin.html">Account</a>
+      </div>
+
+      <a href="user_invoice.html">
+        <div class="logo-container">
+          <img class="logo" src="../../Assets/invoice.png" alt="Invoices" />
+        </div>
+      </a>
+    </div>
+
+    <div class="seperator"></div>
+
+    <div>
+      <div class="cart-item">
+        <div class="cart-content">
+          <div class="item-display">
+            <img
+              id="product-image"
+              src="../Assets/default.jpg"
+              alt=""
+              height="300px"
+            />
+          </div>
+
+          <div class="product-info">
+            <h2 id="image-name">Sunset Over City</h2>
+
+            <section>
+              <h3>Print Material</h3>
+              <p id="material-type">Canvas</p>
+            </section>
+
+            <section>
+              <h3>Print Size</h3>
+              <p id="size-type">Large (18×24)</p>
+            </section>
+
+            <section>
+              <h3>Price</h3>
+              <p class="product-price" id="product-price">$49.99</p>
+            </section>
+
+            <button type="button" class="remove-cart">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="total">
+      <b>Total: $<b id="amount">00.00</b></b>
+      <section style="min-height: 5px"></section>
+      <div>
+        <button type="button" class="clear-cart">Clear Cart</button>
+        <button type="button" class="chechout">Chechout</button>
+      </div>
+    </div>
+
+    <script src="../js/cart.js"></script>
+  </body>
+
+  <footer></footer>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - CanvasCart</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="home-body">
+    <div class="nav-bar">
+      <div class="logo-container">
+        <img class="logo" src="../../Assets/logo.png" alt="" />
+      </div>
+
+      <div class="buttons">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="catalog.html">Shop</a>
+        <a class="nav-button" href="about.html">About us</a>
+        <a class="nav-button" href="signin.html">Account</a>
+      </div>
+
+      <a href="cart.html">
+        <div class="logo-container">
+          <img
+            class="logo"
+            src="../../Assets/shopping-cart-icon.svg"
+            alt="CanvasCart Logo"
+          />
+        </div>
+      </a>
+    </div>
+
+    <div class="sign-in-container">
+      <div class="sign-in-box">
+        <h1>Sign Up</h1>
+        <p id="welcome">Welcome! Let's get you started with a new account.</p>
+
+        <form class="sign-in-form">
+          <!-- First Name -->
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="John" required />
+
+          <!-- Last Name -->
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Doe" required />
+
+          <!-- Date of Birth -->
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required />
+
+          <!-- Gender -->
+          <label for="gender">Gender</label>
+          <select id="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="prefer-not">Prefer not to say</option>
+          </select>
+
+          <!-- Phone Number -->
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="876-555-1234"
+            required
+            maxlength="12"
+            minlength="10"
+          />
+
+          <!-- TRN -->
+          <label for="trn">Tax Registration Number (TRN)</label>
+          <input
+            type="text"
+            id="trn"
+            placeholder="123-456-789"
+            maxlength="11"
+            required
+          />
+
+          <!-- Email -->
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <!-- Password -->
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+          />
+
+          <!-- Confirm Password -->
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="••••••••"
+            required
+          />
+
+          <button type="button" class="sign-in-button" id="sign-up-button">
+            Sign Up
+          </button>
+        </form>
+
+        <p class="extra-links">
+          Already have an account?
+          <a id="sign-in-link" href="signin.html">Sign In</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="../js/signup.js"></script>
+  </body>
+</html>

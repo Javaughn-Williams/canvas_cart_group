@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="nav-bar">
+      <div class="logo-container">
+        <img class="logo" src="../../Assets/logo.png" alt="" />
+      </div>
+
+      <div class="buttons">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="catalog.html">Shop</a>
+        <a class="nav-button" href="about.html">About us</a>
+        <a class="nav-button" href="signin.html">Account</a>
+      </div>
+
+      <a href="cart.html">
+        <div class="logo-container">
+          <img
+            class="logo"
+            src="../../Assets/shopping-cart-icon.svg"
+            alt="CanvasCart Logo"
+          />
+        </div>
+      </a>
+    </div>
+
+    <div class="seperator"></div>
+
+    <!-- Checkout Layout -->
+    <div class="checkout-container">
+      <!-- Order Summary -->
+      <div class="checkout-box">
+        <h2>Order Summary</h2>
+
+        <ul class="items">
+          <!-- Items will be dynamically added here -->
+        </ul>
+
+        <div class="summary-item">
+          <p>Subtotal:</p>
+          <p id="summary-subtotal">$0.00</p>
+        </div>
+
+        <div class="summary-item">
+          <p>Shipping:</p>
+          <p id="summary-shipping">$00.00</p>
+        </div>
+
+        <div class="summary-item">
+          <p>Tax:</p>
+          <p id="summary-tax">$00.00</p>
+        </div>
+
+        <div class="summary-item">
+          <p>Discount:</p>
+          <p id="summary-discount">$00.00</p>
+        </div>
+
+        <div class="summary-item total-line">
+          <p>Total:</p>
+          <p id="summary-total">$0.00</p>
+        </div>
+      </div>
+
+      <!-- Shipping Address -->
+      <div class="checkout-box">
+        <h2>Shipping Information</h2>
+
+        <form id="shipping-form" class="checkout-form">
+          <label>Street</label>
+          <input
+            type="text"
+            id="ship-street"
+            placeholder="123 Main Street"
+            required
+          />
+
+          <label>Town</label>
+          <input
+            type="text"
+            id="ship-town"
+            placeholder="Small Town / District"
+            required
+          />
+
+          <label>City / Parish</label>
+          <input
+            type="text"
+            id="ship-city-parish"
+            placeholder="Kingston / St. Andrew"
+            required
+          />
+
+          <label>Country</label>
+          <input type="text" id="ship-country" placeholder="Jamaica" required />
+
+          <label>Postal Code (optional)</label>
+          <input type="text" id="ship-postal" placeholder="00000" />
+
+          <button type="submit" class="checkout-button">Place Order</button>
+          <button type="button" class="return-to-cart">Return to Cart</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/checkout.js"></script>
+  </body>
+</html>

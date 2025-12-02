@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - CanvasCart</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="home-body">
+    <div class="nav-bar">
+      <div class="logo-container">
+        <img class="logo" src="../../Assets/logo.png" alt="" />
+      </div>
+
+      <div class="buttons">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="catalog.html">Shop</a>
+        <a class="nav-button" href="about.html">About us</a>
+        <a class="nav-button" href="signin.html">Account</a>
+      </div>
+
+      <a href="cart.html">
+        <div class="logo-container">
+          <img
+            class="logo"
+            src="../../Assets/shopping-cart-icon.svg"
+            alt="CanvasCart Logo"
+          />
+        </div>
+      </a>
+    </div>
+
+    <div class="sign-in-container">
+      <div class="sign-in-box">
+        <h1>Sign In</h1>
+        <p id="welcome">Welcome back! Please enter your credentials.</p>
+
+        <form class="sign-in-form">
+          <!-- TRN -->
+          <label for="trn">Tax Registration Number (TRN)</label>
+          <input
+            type="text"
+            id="trn"
+            placeholder="123-456-789"
+            maxlength="11"
+            required
+          />
+
+          <!-- password -->
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+          />
+
+          <button type="submit" class="sign-in-button">Sign In</button>
+        </form>
+
+        <p class="extra-links">
+          <a id="sign-in/up" href="signup.html">Create an Account</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>

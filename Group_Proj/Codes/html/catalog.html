@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog - CanvasCart</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+
+  <body>
+    <div class="nav-bar">
+      <div class="logo-container">
+        <img class="logo" src="../../Assets/logo.png" alt="CanvasCart Logo" />
+      </div>
+
+      <div class="buttons">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="catalog.html"
+          ><b class="current-page">Shop</b></a
+        >
+        <a class="nav-button" href="about.html">About us</a>
+        <a class="nav-button" href="signin.html">Account</a>
+      </div>
+
+      <a href="cart.html">
+        <div class="logo-container">
+          <img
+            class="logo"
+            src="../../Assets/shopping-cart-icon.svg"
+            alt="Shopping Cart"
+          />
+        </div>
+      </a>
+    </div>
+
+    <div class="seperator"></div>
+
+    <!-- JS will fill this with product cards -->
+    <div class="item-list" id="product-list"></div>
+
+    <footer></footer>
+
+    <!-- JS files: products FIRST, then catalog -->
+    <!-- <script src="products.js"></script> -->
+    <script src="../js/all_product.js"></script>
+    <script src="../js/catalog.js"></script>
+  </body>
+</html>

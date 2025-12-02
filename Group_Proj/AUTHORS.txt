@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      console.log(localStorage);
+      window.location.href = "2403195_IA2_S1AY26/Codes/html/catalog.html";
+    </script>
+  </head>
+</html>

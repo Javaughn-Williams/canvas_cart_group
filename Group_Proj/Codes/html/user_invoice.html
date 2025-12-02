@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Invoices - CanvasCart</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="home-body">
+    <div class="nav-bar">
+      <div class="logo-container">
+        <img class="logo" src="../../Assets/logo.png" alt="CanvasCart Logo" />
+      </div>
+
+      <div class="buttons">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="catalog.html">Shop</a>
+        <a class="nav-button" href="about.html">About us</a>
+        <a class="nav-button" href="signin.html">Account</a>
+      </div>
+
+      <a href="cart.html">
+        <div class="logo-container">
+          <img
+            class="logo"
+            src="../../Assets/shopping-cart-icon.svg"
+            alt="Shopping Cart"
+          />
+        </div>
+      </a>
+    </div>
+
+    <section class="invoice-container">
+      <h1>My Purchase History (Invoices Summary)</h1>
+
+      <div id="invoices-list">
+        <p style="text-align: center; font-style: italic" id="loading-message">
+          Loading invoices...
+        </p>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="../js/user_invoices.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Statistics - CanvasCart</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body class="home-body">
+    <div class="nav-bar">
+      <div class="logo-container">
+        <img class="logo" src="../../Assets/logo.png" alt="CanvasCart Logo" />
+      </div>
+
+      <div class="buttons">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="catalog.html">Shop</a>
+        <a class="nav-button" href="about.html">About us</a>
+        <a class="nav-button" href="signin.html">Account</a>
+      </div>
+
+      <a href="cart.html">
+        <div class="logo-container">
+          <img
+            class="logo"
+            src="../../Assets/shopping-cart-icon.svg"
+            alt="Shopping Cart"
+          />
+        </div>
+      </a>
+    </div>
+
+    <section class="stats-container">
+      <h1>Registered User Statistics</h1>
+
+      <p class="total-info">
+        Total Registered Users: <b id="total-users">0</b>
+      </p>
+
+      <h2>1. User Frequency by Gender</h2>
+      <div id="gender-chart">
+        <p class="text-center">Loading data...</p>
+      </div>
+
+      <h2>2. User Frequency by Age Group</h2>
+      <div id="age-chart"></div>
+    </section>
+
+    <footer></footer>
+
+    <script src="../js/user_stats.js"></script>
+  </body>
+</html>
