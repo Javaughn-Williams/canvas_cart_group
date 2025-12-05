@@ -130,7 +130,7 @@ function submit(e) {
   localStorage.removeItem("cart");
 
   alert("Order placed successfully! Redirecting to Invoice.");
-  window.location.href = "invoices.html";
+  window.location.href = "user_invoice.html";
 }
 
 // Select the Return to Cart button
