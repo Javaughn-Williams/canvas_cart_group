@@ -2,20 +2,31 @@
 const form = document.querySelector(".sign-in-form");
 let errorEl = document.querySelector("#login-error");
 
+// Max login attempts
+const MAX_ATTEMPTS = 3;
+
+// Load attempts or default to 0
+let attempts = parseInt(localStorage.getItem("loginAttempts")) || 0;
+
 // Listen for form submission
 form.addEventListener("submit", log_in);
 
 function log_in(e) {
-  e.preventDefault(); // Stop page reload
+  e.preventDefault();
   clearError();
+
+  // If already locked
+  if (attempts >= MAX_ATTEMPTS) {
+    window.location.href = "account_locked.html";
+    return;
+  }
 
   const trn_field = document.getElementById("trn");
   const password_field = document.getElementById("password");
 
-  let trn_input = trn_field.value.trim().replace(/\D/g, ""); // remove dashes/spaces
+  let trn_input = trn_field.value.trim().replace(/\D/g, "");
   const password = password_field.value;
 
-  // Check for empty fields
   if (!trn_input || !password) {
     showError("Please enter both TRN and password.");
     return;
@@ -24,30 +35,46 @@ function log_in(e) {
   // Get users from localStorage
   const users = JSON.parse(localStorage.getItem("users") || "[]");
 
-  // Find matching user (normalize stored TRN by removing dashes)
+  // Find matching user
   const user = users.find((u) => u.trn.replace(/\D/g, "") === trn_input);
 
   if (!user) {
-    showError("No account found with this TRN.");
+    failedAttempt("No account found with this TRN.");
     return;
   }
 
   if (user.password !== password) {
-    showError("Incorrect password.");
+    failedAttempt("Incorrect password.");
     return;
   }
 
-  // Successful login: save current
-  const safeUser = { ...user };
+  // SUCCESSFUL LOGIN
+  localStorage.setItem("loginAttempts", "0"); // reset attempts
+  localStorage.setItem("currentUser", JSON.stringify(user.trn));
 
-  localStorage.setItem("currentUser", JSON.stringify(safeUser.trn));
-
-  // Redirect to homepage
   alert("Login successful!");
-  window.location.href = "index.html";
+  window.location.href = "catalog.html"; // redirect to product catalog
 }
 
-// Function to show error messages
+// Handle failed attempts
+function failedAttempt(message) {
+  if (message == "No account found with this TRN.") {
+    showError(message);
+    return;
+  }
+  attempts++;
+  localStorage.setItem("loginAttempts", attempts);
+
+  if (attempts >= MAX_ATTEMPTS) {
+    window.location.href = "account_locked.html";
+    return;
+  }
+
+  const remaining = MAX_ATTEMPTS - attempts;
+  showError(`${message} (${remaining} attempt(s) remaining)`);
+}
+
+// Show error messages
 function showError(msg) {
   if (!errorEl) {
     errorEl = document.createElement("div");
@@ -59,7 +86,7 @@ function showError(msg) {
   errorEl.textContent = msg;
 }
 
-// Function to clear previous errors
+// Clear previous errors
 function clearError() {
   if (errorEl) errorEl.textContent = "";
 }
