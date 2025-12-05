@@ -17,7 +17,7 @@ body {
   background-color: var(--colour-1);
   align-items: center;
 
-  background-image: url("../2403195_IA2_S1AY26/Assets/background_texture.jpg");
+  background-image: url("../Group_Proj/Assets/background_texture.jpg");
   background-color: var(--colour-1);
   background-blend-mode: multiply;
 }
@@ -132,7 +132,7 @@ body {
   position: absolute;
   inset: 0;
   border: 15px solid transparent;
-  border-image: url("../2403195_IA2_S1AY26/Assets/wood-texture.jpg") 30 round;
+  border-image: url("../Group_Proj/Assets/wood-texture.jpg") 30 round;
   filter: brightness(0.3) sepia(1) hue-rotate(5deg) saturate(4);
 
   pointer-events: none;
@@ -354,7 +354,8 @@ body {
   border-color: var(--colour-1);
 }
 
-.sign-in-button {
+.sign-in-button,
+.cancel-button {
   padding: 0.75em;
   border-radius: 10px;
   border: none;
@@ -365,7 +366,12 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.sign-in-button:hover {
+.cancel-button{
+  background-color: var(--colour-5);
+}
+
+.sign-in-button:hover,
+.cancel-button:hover {
   background-color: var(--colour-3);
   color: var(--colour-1);
 }

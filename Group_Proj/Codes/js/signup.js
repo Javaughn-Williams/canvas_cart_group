@@ -4,17 +4,8 @@ let errorEl = document.querySelector("#login-error");
 const signup_button = document.getElementById("sign-up-button");
 signup_button.addEventListener("click", signup);
 
-function calculateAge(dob) {
-  const birthDate = new Date(dob);
-  const today = new Date();
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const m = today.getMonth() - birthDate.getMonth();
-
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
-  return age;
-}
+const cancel_button = document.getElementById("cancel-button");
+cancel_button.addEventListener("click", cancel);
 
 function signup(e) {
   e.preventDefault();
@@ -100,6 +91,24 @@ function signup(e) {
 
   alert("Sign up successful! You can now log in.");
   window.location.href = "index.html";
+}
+
+function cancel() {
+  alert("Form has been cleared.");
+  form.reset();
+  clearError();
+}
+
+function calculateAge(dob) {
+  const birthDate = new Date(dob);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
 }
 
 // Show error message
